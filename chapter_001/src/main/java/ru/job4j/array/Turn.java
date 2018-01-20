@@ -11,12 +11,11 @@ public class Turn {
      * @return возвращает ссылку на перевернутый массив
      */
     int[] back(int[] array) {
-        int halfOfLenght = array.length / 2;
-        int lastIndex = array.length - 1;
-        for (int i = 0; i < halfOfLenght; i++) {
+
+        for (int i = 0; i < array.length / 2; i++) {
             int buffer = array[i];
-            array[i] = array[lastIndex - i];
-            array[lastIndex - i] = buffer;
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = buffer;
         }
         return array;
     }
